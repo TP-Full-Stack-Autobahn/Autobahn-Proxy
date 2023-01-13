@@ -83,7 +83,8 @@ const userController = (server: Express) => {
             lastname: string,
             firstname: string,
             phone: string,
-            nationality: string
+            nationality: string,
+            client: string
         } = req.body;
         axios.post(
             endPointAutobahnUserInscription,
@@ -92,7 +93,8 @@ const userController = (server: Express) => {
                 lastname: body.lastname,
                 firstname: body.firstname,
                 phone: body.phone,
-                nationality: body.nationality
+                nationality: body.nationality,
+                client: body.client
             }
         ).then(r => {
             res.send(r.data)
