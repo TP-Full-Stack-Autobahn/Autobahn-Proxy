@@ -16,9 +16,7 @@ const carsController = (server: Express) => {
         ).then(r => {
             res.send(r.data)
         }).catch(e => {
-            console.log(e.response)
-            res.send(e)
-            // res.status(e.response.status).send(e.response.data)
+            res.status(e.response.status).send(e.response.data)
         })
     });
 
@@ -42,7 +40,7 @@ const carsController = (server: Express) => {
         })
     });
 
-    server.post(urlCarEdit, (req, res) => {
+    server.put(urlCarEdit, (req, res) => {
         const carid = req.params.id
         const body: {
             name: string,
@@ -64,7 +62,7 @@ const carsController = (server: Express) => {
         })
     });
 
-    server.post(urlCarDelete, (req, res) => {
+    server.delete(urlCarDelete, (req, res) => {
         const carid = req.params.id
         axios.post(
             endPointAutobahnCarsDelete.replace(':id', carid),
