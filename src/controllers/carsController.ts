@@ -47,7 +47,7 @@ const carsController = (server: Express) => {
             price: number,
             image: string
         } = req.body;
-        axios.post(
+        axios.put(
             endPointAutobahnCarsEdit.replace(':id', carid),
             {
                 name: body.name,
@@ -64,9 +64,8 @@ const carsController = (server: Express) => {
 
     server.delete(urlCarDelete, (req, res) => {
         const carid = req.params.id
-        axios.post(
+        axios.delete(
             endPointAutobahnCarsDelete.replace(':id', carid),
-            {},
             {headers: {Authorization: req.header("Authorization")}}
         ).then(r => {
             res.send(r.data)
