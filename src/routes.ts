@@ -37,7 +37,7 @@ export const endPointAutobahnUserAdmin = `${urlAutobahnUser}/admin`;
 export const endPointAutobahnUserCheckRole = `${urlAutobahnUser}/user/checkrole`;
 
 // Autobahn Cars API
-const urlAutobahnCars = "http://127.0.0.1:5002";
+const urlAutobahnCars = "http://car:5002";
 export const endPointAutobahnCarsCars = `${urlAutobahnCars}/cars`;
 export const endPointAutobahnCarsCreate = `${urlAutobahnCars}/cars/create`;
 export const endPointAutobahnCarsEdit = `${urlAutobahnCars}/cars/edit/:id`;
