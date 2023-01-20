@@ -8,7 +8,7 @@ import {
     endPointAutobahnUserUser,
     endPointAutobahnUserUsers,
     endPointAutobahnUserValidUser,
-    endPointSAutobahnUserHello,
+    endPointAutobahnUserHello,
     urlAdmin,
     urlCheckRole,
     urlFutureUsers,
@@ -23,7 +23,7 @@ import axios from "axios";
 
 const userController = (server: Express) => {
     server.get(urlHello, (_, res) => {
-        axios.get(endPointSAutobahnUserHello).then(r => {
+        axios.get(endPointAutobahnUserHello).then(r => {
             res.send(r.data);
         }).catch(e => {
             console.log(e.message)

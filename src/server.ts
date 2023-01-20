@@ -7,6 +7,7 @@ const port = 8000;
 
 import userController from "./controllers/userController";
 import verifyToken from "./middlewares/verifyToken";
+import carsController from "./controllers/carsController";
 
 // parse application/x-www-form-urlencoded
 server.use(bodyParser.urlencoded({ extended: false }));
@@ -22,3 +23,4 @@ server.listen(port, () => {
 });
 
 userController(server)
+carsController(server)
