@@ -14,7 +14,7 @@ export const urlAdmin = `${baseUrlUser}/admin`;
 export const urlCheckRole = `${baseUrlUser}/checkRole`;
 export const urlCars = `${baseUrlCar}/cars`;
 export const urlCarCreate = `${baseUrlCar}/create`;
-export const urlCarEdit = `${baseUrlUser}/edit/:id`;
+export const urlCarEdit = `${baseUrlCar}/edit/:id`;
 export const urlCarDelete = `${baseUrlCar}/delete/:id`;
 
 export const urlsAcceptedWithoutConnection = [
