@@ -7,8 +7,13 @@ import {
     urlCarCreate, urlCarDelete,
     urlCarEdit, urlCars
 } from "../routes";
+import verifyToken from "../middlewares/verifyToken";
+import jwt_decode from "jwt-decode";
+import isAdmin from "../middlewares/isAdmin";
 
 const carsController = (server: Express) => {
+    server.use(isAdmin)
+
     server.get(urlCars, (req, res) => {
         axios.get(
             endPointAutobahnCarsCars,
